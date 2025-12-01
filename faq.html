@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - New•K Woman</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo" onclick="window.location.href='index.html'">NEW•K Woman</h1>
+            
+            <!-- Desktop Menu -->
+            <nav class="nav-desktop">
+                <a href="index.html" class="nav-link">INICIO</a>
+                <div class="dropdown">
+                    <button class="nav-link dropdown-btn">
+                        CATÁLOGO 
+                        <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu">
+                        <a href="sandalias.html" class="dropdown-item">Sandalias</a>
+                       
+                    </div>
+                </div>
+                <a href="faq.html" class="nav-link">PREGUNTAS FRECUENTES</a>
+                <a href="contacto.html" class="nav-link">CONTACTO</a>
+                <button onclick="openProductList()" class="nav-link my-list-link">
+                    MI LISTA
+                    <span id="listBadge" class="list-badge">0</span>
+                </button>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html" class="mobile-link">INICIO</a>
+            <div class="mobile-dropdown">
+                <button class="mobile-link mobile-dropdown-btn" onclick="toggleMobileCatalog()">
+                    CATÁLOGO
+                    <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                <div class="mobile-dropdown-menu" id="mobileCatalog">
+                    <a href="sandalias.html" class="mobile-dropdown-item">Sandalias</a>
+                   
+                </div>
+            </div>
+            <a href="faq.html" class="mobile-link">PREGUNTAS FRECUENTES</a>
+            <a href="contacto.html" class="mobile-link">CONTACTO</a>
+            <button onclick="openProductList()" class="mobile-link mobile-list-link">
+                MI LISTA
+                <span id="mobileListBadge" class="mobile-list-badge">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">PREGUNTAS FRECUENTES</h2>
+            
+            <div class="faq-item">
+                <h3 class="faq-question">1. ¿Cuál es la compra mínima mayorista?</h3>
+                <p class="faq-answer">La compra mínima es una tarea, es decir, un mismo modelo (material, color, etc) en sus talles correspondientes. La tarea completa es de 8 pares.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">2. ¿Cómo hago un pedido mayorista?</h3>
+                <p class="faq-answer">Los pedidos se realizan por WhatsApp. Te enviamos catálogo actualizado, fotos, videos reales y disponibilidad del momento para armar tu pedido de forma rápida.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">3. ¿Cómo sé qué modelos están disponibles?</h3>
+                <p class="faq-answer">Actualizamos el catálogo de manera frecuente. También podés consultarnos por WhatsApp para confirmar stock y reposiciones del día.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">4. ¿Puedo comprar varias tareas de distintos modelos?</h3>
+                <p class="faq-answer">Sí, podés armar tu pedido con todas las tareas que quieras, según disponibilidad.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">5. ¿Hacen envíos a todo el país?</h3>
+                <p class="faq-answer">Sí, enviamos mayorista a todo el país mediante transporte o mensajería a elección del cliente. El costo del envío queda a cargo del comprador.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">6. ¿Cuáles son los medios de pago?</h3>
+                <p class="faq-answer">Aceptamos transferencia bancaria. Podés consultarnos si necesitás otras opciones.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">7. ¿Cuánto tarda en salir mi pedido?</h3>
+                <p class="faq-answer">Dependiendo del volumen, las tareas suelen despacharse entre 24 y 72 horas. Si necesitás urgencia, consultanos y te confirmamos en el momento.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">8. ¿Puedo ver el producto real antes de comprar?</h3>
+                <p class="faq-answer">Sí, te enviamos fotos y videos reales de cada modelo para que veas detalles de materiales, costuras y terminación.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">9. ¿Tienen reposición de modelos?</h3>
+                <p class="faq-answer">Sí, fabricamos de manera constante y trabajamos con reposiciones. Si un modelo está en producción, te podemos avisar cuando vuelve a ingresar.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">10. ¿Qué calidad de materiales usan?</h3>
+                <p class="faq-answer">Trabajamos con materiales seleccionados y terminaciones cuidadas para ofrecer calzado accesible pero de buena calidad, ideal para rotar stock sin riesgo.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">11. ¿Puedo elegir la distribución de talles dentro de una tarea?</h3>
+                <p class="faq-answer">No, las tareas vienen armadas con su distribución estándar de fábrica. Podés consultarnos qué distribución tiene cada modelo.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">12. ¿Puedo visitar la fábrica?</h3>
+                <p class="faq-answer">Sí, podés coordinar una visita previa cita para ver modelos y disponibilidad.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">13. ¿Qué pasa si un modelo llega con falla?</h3>
+                <p class="faq-answer">Revisamos todos los pares antes del despacho, pero si algo llega con falla, lo solucionamos según el caso (cambio, crédito, etc.).</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">14. ¿Puedo reservar modelos?</h3>
+                <p class="faq-answer">Sí, podés reservar tareas por un tiempo limitado. Las reservas se confirman una vez acreditado el pago.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3 class="faq-question">15. ¿Trabajan modelos por temporada?</h3>
+                <p class="faq-answer">Sí, lanzamos colecciones por temporada y también modelos de rotación permanente. Podés pedirnos el listado actualizado.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">© 2025 New-K Woman. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante WhatsApp -->
+    <div class="whatsapp-float">
+        <div class="whatsapp-bubble" id="whatsappBubble">
+            <p class="whatsapp-bubble-text">Ponete en contacto con nosotros</p>
+        </div>
+         <a href="https://wa.me/5491151828421?text=Hola!" 
+           class="whatsapp-button" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           aria-label="Contactar por WhatsApp">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.203 1.393 1.393-5.203-0.292-0.507c-1.224-2.162-1.87-4.588-1.87-7.070 0-7.444 6.056-13.5 13.5-13.5s13.5 6.056 13.5 13.5c0 7.444-6.056 13.5-13.5 13.5zM22.245 18.832c-0.392-0.196-2.32-1.145-2.679-1.275s-0.621-0.196-0.883 0.196c-0.262 0.392-1.015 1.275-1.245 1.537s-0.458 0.294-0.85 0.098c-0.392-0.196-1.656-0.61-3.155-1.946-1.167-1.040-1.955-2.325-2.185-2.717s-0.024-0.605 0.172-0.801c0.176-0.176 0.392-0.458 0.588-0.687s0.262-0.392 0.392-0.654c0.131-0.262 0.065-0.491-0.033-0.687s-0.883-2.13-1.211-2.915c-0.319-0.765-0.643-0.661-0.883-0.673-0.228-0.012-0.49-0.014-0.752-0.014s-0.687 0.098-1.047 0.491c-0.36 0.392-1.372 1.34-1.372 3.268s1.405 3.791 1.601 4.053c0.196 0.262 2.767 4.225 6.704 5.924 0.937 0.405 1.668 0.647 2.237 0.828 0.943 0.3 1.801 0.257 2.479 0.156 0.756-0.113 2.32-0.949 2.647-1.865s0.327-1.701 0.229-1.865c-0.098-0.164-0.36-0.262-0.752-0.458z"/>
+            </svg>
+        </a>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
